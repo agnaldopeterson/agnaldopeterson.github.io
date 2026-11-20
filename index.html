@@ -5,33 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfólio de Agnaldo Peterson. Projetos de dados, BI, automação e qualidade de software.">
   <title>Agnaldo Peterson | Dados, BI e automação</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <a class="skip" href="#conteudo">Ir para o conteúdo</a>
   <header class="shell header">
-    <a class="brand" href="#inicio">Agnaldo Peterson</a>
+    <a class="brand" href="#inicio"><span class="monogram" aria-hidden="true">AP</span> Agnaldo Peterson</a>
     <nav aria-label="Navegação principal">
       <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Skills</a>
       <a href="#trajetoria">Trajetória</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
   <main id="conteudo" class="shell">
     <section id="inicio" class="hero" aria-labelledby="titulo">
-      <p class="eyebrow">Portfólio · Agnaldo Peterson</p>
-      <h1 id="titulo">Dados, BI<br>e <em>automação.</em></h1>
-      <p>Trabalho com análise de dados, integração e qualidade de software. Uso SQL, Power BI e Python para transformar regras de negócio em indicadores e aplicações.</p>
-      <a class="button" href="#projetos">Explorar projetos <span aria-hidden="true">↓</span></a>
+      <div class="hero-copy">
+        <p class="eyebrow">Agnaldo Peterson · Portfólio</p>
+        <h1 id="titulo">Dados, BI<br>e <em>automação.</em></h1>
+        <p>Uso SQL, Power BI e Python para transformar regras de negócio em indicadores, análises e aplicações web.</p>
+        <div class="actions">
+          <a class="button" href="#projetos">Explorar projetos <span aria-hidden="true">↓</span></a>
+          <a class="secondary" href="#contato">Entrar em contato</a>
+        </div>
+      </div>
+      <a class="hero-case" href="#migracao">
+        <span class="eyebrow">Projeto em destaque</span>
+        <span class="hero-case-title">Power BI <span aria-hidden="true">→</span> Python</span>
+        <span class="hero-case-caption">Jornada dos Leads e Clientes</span>
+        <span class="hero-metrics">
+          <span><strong>171</strong> medidas DAX</span>
+          <span><strong>54</strong> colunas calculadas</span>
+        </span>
+        <span class="hero-case-caption">Catálogo do modelo original</span>
+        <span class="hero-case-link">Ver estudo de caso <span aria-hidden="true">↗</span></span>
+      </a>
     </section>
 
     <section id="projetos" aria-labelledby="titulo-projetos">
       <h2 id="titulo-projetos">Projetos</h2>
-      <article class="featured">
+      <article class="featured" id="migracao">
         <div>
           <p class="eyebrow">Estudo de caso · Business Intelligence</p>
           <h3>Migração de Power BI para Python</h3>
           <p>A Jornada dos Leads e Clientes levou para a web análises de captação, descartes, etapas do funil comercial, produtos e indicadores imobiliários como VGV, VSO e IVV.</p>
+          <p><a href="#previa">Experimentar a prévia interativa</a></p>
           <ul class="tags" aria-label="Tecnologias">
             <li>Power BI</li><li>DAX</li><li>PostgreSQL</li><li>pandas</li><li>Streamlit</li><li>Plotly</li>
           </ul>
@@ -44,10 +62,30 @@
             <li><strong>Streamlit e Plotly</strong><span>Painel web interativo</span></li>
           </ol>
         </div>
+        <section class="preview" id="previa" aria-labelledby="titulo-previa">
+          <h4 id="titulo-previa">Prévia interativa do funil</h4>
+          <p>Demonstração com dados fictícios. Alterne o período para explorar os indicadores e as etapas da jornada.</p>
+          <fieldset class="preview-controls" hidden>
+            <legend>Período</legend>
+            <label><input type="radio" name="periodo-demo" value="30" checked> 30 dias</label>
+            <label><input type="radio" name="periodo-demo" value="90"> 90 dias</label>
+            <label><input type="radio" name="periodo-demo" value="180"> 180 dias</label>
+          </fieldset>
+          <dl class="preview-metrics" aria-live="polite">
+            <div><dt>Leads</dt><dd id="demo-leads">420</dd></div>
+            <div><dt>Reservas</dt><dd id="demo-reservas">52</dd></div>
+            <div><dt>Conversão</dt><dd id="demo-conversao">12,4%</dd></div>
+          </dl>
+          <ul class="funnel" aria-label="Etapas do funil">
+            <li data-stage="leads"><span>Captação</span><span class="funnel-track" aria-hidden="true"><span style="width: 100%"></span></span><strong>420</strong></li>
+            <li data-stage="preCadastro"><span>Pré-cadastro</span><span class="funnel-track" aria-hidden="true"><span style="width: 41.7%"></span></span><strong>175</strong></li>
+            <li data-stage="reservas"><span>Reserva</span><span class="funnel-track" aria-hidden="true"><span style="width: 12.4%"></span></span><strong>52</strong></li>
+          </ul>
+        </section>
         <div class="case-detail">
           <div>
             <h4>Mapeamento e implementação</h4>
-            <p>O catálogo do modelo original documenta <strong>171 medidas DAX</strong> e <strong>54 colunas calculadas</strong>. A implementação em Python traduziu transformações do Power Query e regras de indicadores para o painel web.</p>
+            <p>A implementação em Python traduziu transformações do Power Query e regras de indicadores para o painel web.</p>
           </div>
           <div>
             <h4>Validação</h4>
@@ -83,6 +121,43 @@
       </div>
     </section>
 
+    <section id="habilidades" class="skills" aria-labelledby="titulo-skills">
+      <h2 id="titulo-skills">Habilidades em prática</h2>
+      <p>Projetos em que cada habilidade aparece, entre os cinco apresentados neste portfólio.</p>
+      <ul class="skill-grid">
+        <li>
+          <div><strong>SQL e bancos de dados</strong><span aria-hidden="true">4/5</span></div>
+          <meter min="0" max="5" value="4" aria-label="SQL e bancos de dados em 4 de 5 projetos"></meter>
+          <small>Migração · ETL · CRUD em C# · Dashboard de vendas</small>
+        </li>
+        <li>
+          <div><strong>Power BI</strong><span aria-hidden="true">2/5</span></div>
+          <meter min="0" max="5" value="2" aria-label="Power BI em 2 de 5 projetos"></meter>
+          <small>Migração · Dashboard de vendas</small>
+        </li>
+        <li>
+          <div><strong>Python</strong><span aria-hidden="true">1/5</span></div>
+          <meter min="0" max="5" value="1" aria-label="Python em 1 de 5 projetos"></meter>
+          <small>Migração</small>
+        </li>
+        <li>
+          <div><strong>C#</strong><span aria-hidden="true">1/5</span></div>
+          <meter min="0" max="5" value="1" aria-label="C# em 1 de 5 projetos"></meter>
+          <small>CRUD em C#</small>
+        </li>
+        <li>
+          <div><strong>JavaScript e Playwright</strong><span aria-hidden="true">1/5</span></div>
+          <meter min="0" max="5" value="1" aria-label="JavaScript e Playwright em 1 de 5 projetos"></meter>
+          <small>Verzel Store</small>
+        </li>
+        <li>
+          <div><strong>Alteryx</strong><span aria-hidden="true">1/5</span></div>
+          <meter min="0" max="5" value="1" aria-label="Alteryx em 1 de 5 projetos"></meter>
+          <small>ETL</small>
+        </li>
+      </ul>
+    </section>
+
     <section id="trajetoria" class="career" aria-labelledby="titulo-trajetoria">
       <h2 id="titulo-trajetoria">Trajetória</h2>
       <div>
@@ -97,10 +172,12 @@
   <footer id="contato" class="shell footer">
     <h2>Contato</h2>
     <ul>
+      <li><a href="https://wa.me/5516992566111">WhatsApp</a></li>
       <li><a href="https://www.linkedin.com/in/agnaldopeterson/">LinkedIn</a></li>
       <li><a href="https://github.com/agnaldopeterson">GitHub</a></li>
       <li><a href="mailto:agnaldopeterson@gmail.com">E-mail</a></li>
     </ul>
   </footer>
+  <script src="preview.js" defer></script>
 </body>
 </html>
